@@ -1,0 +1,3062 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol,
+li {
+    list-style-type: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+html,
+body {
+    height: 100%;
+    line-height: 1;
+    font-size: 16px;
+    color: #000;
+    font-family: 'Sree Krushnadevaraya', serif;
+    background-color: #ffffff;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/*---------CONTAINER-CLASS---------*/
+._container {
+    max-width: 1440px;
+    margin: 0px auto;
+    padding: 0px 120px;
+    box-sizing: content-box;
+}
+
+.ibg {
+    position: relative;
+}
+
+.ibg image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+/*---------HEADER---------*/
+
+.header {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 50;;
+}
+
+.header__container {
+    display: flex;
+    min-height: 100px;
+    align-items: center;
+}
+
+@media (max-width: 479px) {
+    .header__container {
+        min-height: 70px;
+    }
+}
+
+.header__logo-max {
+    font-family: 'Sree Krushnadevaraya';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 99px;
+    color: #000000;
+}
+
+.header__burger {
+    display: none;
+}
+
+.menu {
+    padding: 5px 5px;
+    margin-left: 193px;
+}
+
+.menu__list {
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.menu__item {
+    margin: 0px 63px 0px 0px;
+}
+
+.menu__link {
+    font-family: 'Sree Krushnadevaraya';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 74px;
+    text-transform: lowercase;
+    color: #000000;
+}
+
+@media (max-width: 767px) {
+
+    body.lock {
+        overflow: hidden;
+    }
+
+    .header__burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        z-index: 5;
+    }
+    
+    .header__burger span {
+        position: absolute;
+        background-color: #000;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        top: 9px;
+        transition: all 0.3s ease 0s;
+    }
+   
+    .header__burger::before {
+        content: "";
+        background-color: #000;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        left: 0;
+        transition: all 0.3s ease 0s;
+    }
+
+    .header__burger::after {
+        content: "";
+        background-color: #000;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        left: 0;
+    }
+
+    .header__burger::after {
+        bottom: 0;
+    }
+
+    .header__burger::before {
+        top: 0;
+    }
+
+    .header__burger.active::before {
+        transform: rotate(45deg);
+        top: 8px;
+    }
+    
+    .header__burger.active span {
+        transform: scale(0);
+    }
+
+    .header__burger.active::after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+
+    .header__menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #FFDCC7;
+        overflow: auto;
+    }
+
+    .header__menu.active {
+        top: 0;
+        padding: 70px;
+    }
+
+    .menu__list {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu__item {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 479px) {
+    .menu__link {
+        font-size: 30px;
+        text-align: center;
+    }
+}
+
+
+/*---------PAGE---------*/
+
+.page {
+    flex: 1 1 auto;
+}
+
+/*---------MAIN---------*/
+
+.main-block {
+    position: relative;
+}
+
+.main-block__image {
+    position: absolute;
+    flex: 0 1 50%;
+    margin-left: 450px;
+    margin-top: -356px;
+}
+
+.main-block__image img {
+    max-width: 80%;
+}
+
+.main-block__button {
+    background: #E2BE59;
+    box-shadow: 0px 4px 5px rgb(0 0 0 / 53%);
+    border-radius: 111px;
+    width: 164px;
+    height: 55px;
+    font-family: 'Open Sans';
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.02em;
+    padding: 28px;
+    color: #000000;
+    margin-top: 27px;
+    margin-left: 7px;
+}
+
+.main-block__line {
+    width: 1206px;
+    height: 127px;
+    background: #E2BE59;
+    margin-left: -508px;
+    border-radius: 243px;
+}
+
+.main-block__body {
+    padding: 184px 0px 50px 0px;
+    position: relative;
+    z-index: 2;
+}
+
+.main-block__photo-main {
+    width: 120%;
+    height: 100%;
+    margin-top: -70px;
+    margin-left: -125px;
+}
+
+@media screen and (min-width:230px) and (max-width:290px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__photo-main {
+        width: 650px;
+        height: 400px;
+        margin-top: -77px;
+    }
+    
+}
+
+@media screen and (min-width:290px) and (max-width:349px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__photo-main {
+        width: 650px;
+        height: 400px;
+        margin-top: -77px;
+    }
+    
+}
+
+@media screen and (min-width:349px) and (max-width:389px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__photo-main {
+        width: 718px;
+        height: 475px;
+        margin-top: -77px;
+        margin-left: -262px;
+    }
+    
+}
+
+@media screen and (min-width:389px) and (max-width:444px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__photo-main {
+        width: 1026px;
+        height: 666px;
+        margin-top: -77px;
+        margin-left: -424px;
+    }
+    
+}
+
+@media screen and (min-width:444px) and (max-width:540px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__photo-main {
+        width: 767px;
+        height: 500px;
+        margin-top: -70px;
+    }
+    
+}
+
+@media screen and (min-width:540px) and (max-width:600px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__photo-main {
+        width: 767px;
+        height: 500px;
+        margin-top: -70px;
+    }
+    
+}
+
+@media screen and (min-width:600px) and (max-width:665px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__photo-main {
+        width: 767px;
+        height: 500px;
+        margin-top: -70px;
+    }
+    
+}
+
+@media screen and (min-width:665px) and (max-width:700px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__photo-main {
+        width: 767px;
+        height: 500px;
+        margin-top: -70px;
+    }
+    
+}
+
+@media screen and (min-width:700px) and (max-width:766px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__photo-main {
+        width: 767px;
+        height: 500px;
+        margin-top: -70px;
+    }
+    
+}
+
+@media screen and (min-width:766px) and (max-width:800px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__photo-main {
+        width: 856px;
+        height: 541px;
+        margin-top: -16px;
+    }
+    
+}
+
+@media screen and (min-width:800px) and (max-width:972px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__photo-main {
+        width: 1056px;
+        height: 574px;
+        margin-top: -17px;
+    }
+    
+}
+
+@media screen and (min-width:972px) and (max-width:1000px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__photo-main {
+        width: 1056px;
+        height: 574px;
+        margin-top: -73px;
+    }
+    
+}
+
+@media screen and (min-width:1000px) and (max-width:1185px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__photo-main {
+        width: 150%;
+        height: 120%;
+        margin-top: -70px;
+        margin-left: -125px;
+    }
+    
+}
+
+@media screen and (min-width:1185px) and (max-width:1215px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__photo-main {
+        width: 150%;
+        height: 120%;
+        margin-top: -24px;
+        margin-left: -125px;
+    }
+    
+}
+
+@media screen and (min-width:1215px) and (max-width:1496px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__photo-main {
+        width: 125%;
+        height: 100%;
+        margin-top: -21px;
+    }
+    
+}
+
+@media screen and (min-width:1496px) and (max-width:1500px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__photo-main {
+        width: 120%;
+        height: 100%;
+        margin-top: -70px;
+    }
+    
+}
+
+
+
+
+
+@media screen and (min-width:200px) and (max-width:310px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .header__burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        z-index: 5;
+        margin-left: -241px;
+        margin-top: 24px;
+    }
+
+    .menu {
+        padding: 5px 5px;
+        margin-left: 0px;
+    }
+
+    .header__logo-max {
+        margin-left: -70px;
+    }
+}
+
+@media screen and (min-width:310px) and (max-width:478px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .header__burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        z-index: 5;
+        margin-left: -275px;
+        margin-top: 23px;
+    }
+
+    .header__logo-max {
+        margin-left: -25px;
+    }
+
+    .menu {
+        padding: 5px 5px;
+        margin-left: 0px;
+    }
+}
+
+@media screen and (min-width:478px) and (max-width:767px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .header__burger {
+        display: block;
+        position: relative;
+        width: 46px;
+        height: 21px;
+        z-index: 5;
+        margin-left: -276px;
+        margin-top: 20px;
+    }
+
+    .header__logo-max {
+        margin-left: -25px;
+    }
+
+    .menu {
+        padding: 5px 5px;
+        margin-left: 0px;
+    }
+}
+
+@media screen and (min-width:767px) and (max-width:1185px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .header__logo-max {
+        margin-left: -91px;
+        font-size: 45px;
+    }
+
+    .menu {
+        padding: 5px 5px;
+        margin-left: 122px;
+        margin-top: 8px;
+    }
+
+    .menu__link {
+        font-family: 'Sree Krushnadevaraya';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 74px;
+        text-transform: lowercase;
+        color: #000000;
+    }
+
+    .menu__item {
+        margin: 0px 17px 0px 0px;
+    }
+
+}
+
+
+
+
+/*---------FOOTER---------*/
+
+.footer__text {
+    flex-wrap: wrap;
+    text-align: center;
+    margin-left: 333px;
+}
+
+.footer__designation {
+    font-family: 'Sree Krushnadevaraya';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    color: #000000;
+}
+
+.footer__designer {
+    font-family: 'Sree Krushnadevaraya';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    color: #000000;
+}
+
+.footer__icon {
+    width: 25px;
+    height: 25px;
+}
+
+@media screen and (min-width:1142px) and (max-width:1266px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .footer__text {
+        flex-wrap: wrap;
+        text-align: center;
+        margin-left: 273px;
+    }
+
+    .footer__designation {
+        font-family: 'Sree Krushnadevaraya';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        color: #000000;
+    }
+    
+    .footer__designer {
+        font-family: 'Sree Krushnadevaraya';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        color: #000000;
+    }
+    
+    .footer__icon {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+
+@media screen and (min-width:1000px) and (max-width:1142px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .footer__text {
+        flex-wrap: wrap;
+        margin-left: 275px;
+    }
+    
+    .footer__designer {
+        font-family: 'Sree Krushnadevaraya';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        color: #000000;
+    }
+    
+    .footer__icon {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .footer__designation {
+        font-family: 'Sree Krushnadevaraya';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        color: #000000;
+    }
+}
+
+@media screen and (min-width:900px) and (max-width:1000px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .footer__text {
+        flex-wrap: wrap;
+        margin-left: 202px;
+        margin-top: -76px;
+    }
+    
+    .footer__designer {
+        font-family: 'Sree Krushnadevaraya';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        color: #000000;
+    }
+    
+    .footer__icon {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .footer__designation {
+        font-family: 'Sree Krushnadevaraya';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        color: #000000;
+    }
+}
+
+@media screen and (min-width:850px) and (max-width:900px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .footer__text {
+        flex-wrap: wrap;
+        margin-left: 157px;
+        margin-top: -76px;
+    }
+    
+    .footer__designer {
+        font-family: 'Sree Krushnadevaraya';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        color: #000000;
+    }
+    
+    .footer__icon {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .footer__designation {
+        font-family: 'Sree Krushnadevaraya';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        color: #000000;
+    }
+}
+
+@media screen and (min-width:800px) and (max-width:850px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .footer__text {
+        flex-wrap: wrap;
+        margin-left: 136px;
+        margin-top: -76px;
+    }
+    
+    .footer__designer {
+        font-family: 'Sree Krushnadevaraya';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        color: #000000;
+    }
+    
+    .footer__icon {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .footer__designation {
+        font-family: 'Sree Krushnadevaraya';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        color: #000000;
+    }
+}
+
+@media screen and (min-width:700px) and (max-width:800px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .footer__text {
+        flex-wrap: wrap;
+        margin-left: 118px;
+        margin-top: -88px;
+    }
+    
+    .footer__designer {
+        font-family: 'Sree Krushnadevaraya';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        color: #000000;
+    }
+    
+    .footer__icon {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .footer__designation {
+        font-family: 'Sree Krushnadevaraya';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        color: #000000;
+    }
+}
+
+@media screen and (min-width:558px) and (max-width:700px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .footer__text {
+        flex-wrap: wrap;
+        margin-left: 23px;
+        margin-top: -86px;
+    }
+    
+    .footer__designer {
+        font-family: 'Sree Krushnadevaraya';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        color: #000000;
+    }
+    
+    .footer__icon {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .footer__designation {
+        font-family: 'Sree Krushnadevaraya';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        color: #000000;
+    }
+}
+
+@media screen and (min-width:500px) and (max-width:558px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .footer__text {
+        flex-wrap: wrap;
+        margin-left: 23px;
+        margin-top: -70px;
+    }
+    
+    .footer__designer {
+        font-family: 'Sree Krushnadevaraya';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        color: #000000;
+    }
+    
+    .footer__icon {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .footer__designation {
+        font-family: 'Sree Krushnadevaraya';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        color: #000000;
+    }
+}
+
+@media screen and (min-width:400px) and (max-width:500px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .footer__text {
+flex-wrap: wrap;
+    margin-left: -109px;
+    margin-top: -71px;
+    }
+    
+    .footer__designer {
+        font-family: 'Sree Krushnadevaraya';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        color: #000000;
+    }
+    
+    .footer__icon {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .footer__designation {
+        font-family: 'Sree Krushnadevaraya';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        color: #000000;
+        width: 397px;
+    }
+}
+
+@media screen and (min-width:360px) and (max-width:400px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .footer__text {
+        flex-wrap: wrap;
+        margin-left: -85px;
+        margin-top: -60px;
+    }
+    
+    .footer__designer {
+        font-family: 'Sree Krushnadevaraya';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        color: #000000;
+    }
+    
+    .footer__icon {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .footer__designation {
+        font-family: 'Sree Krushnadevaraya';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        color: #000000;
+        width: 320px;
+    }
+}
+
+@media screen and (min-width:300px) and (max-width:360px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .footer__text {
+        flex-wrap: wrap;
+        margin-left: -85px;
+        margin-top: -55px;
+    }
+    
+    .footer__designer {
+        font-family: 'Sree Krushnadevaraya';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        color: #000000;
+    }
+    
+    .footer__icon {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .footer__designation {
+        font-family: 'Sree Krushnadevaraya';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        color: #000000;
+        width: 275px;
+    }
+}
+
+@media screen and (min-width:200px) and (max-width:300px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .footer__text {
+        flex-wrap: wrap;
+        margin-left: -80px;
+        margin-top: -77px;
+    }
+    
+    .footer__designer {
+        font-family: 'Sree Krushnadevaraya';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        color: #000000;
+    }
+    
+    .footer__icon {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .footer__designation {
+        font-family: 'Sree Krushnadevaraya';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        color: #000000;
+        width: 200px;
+    }
+}
+
+/*---------PORTRAITS---------*/
+
+.main-block__portraits {
+    position: absolute;
+    margin-top: -897px;
+}
+
+.portrait-boy {
+    position: relative;
+    width: 492px;
+    height: 314px;
+    z-index: 3;
+    margin-left: -972px;
+}
+
+.portrait-boy:hover {
+	box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+	transform: scale(1.1);
+}
+
+.portrait-girl {
+    position: relative;
+    width: 589px;
+    height: 406px;
+    z-index: 1;
+    margin-top: 27px;
+    margin-left: 289px;
+}
+
+.portrait-girl:hover {
+	box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+	transform: scale(1.1);
+}
+
+.portrait-lady {
+    position: relative;
+    width: 729px;
+    height: 470px;
+    z-index: 7;
+    margin-left: 732px;
+    margin-top: -433px;
+}
+
+.portrait-lady:hover {
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+	transform: scale(1.1);
+}
+
+.portrait-miss {
+    position: relative;
+    width: 507px;
+    height: 449px;
+    z-index: 2;
+    margin-top: -240px;
+    margin-left: -28px;
+}
+
+.portrait-miss:hover {
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+	transform: scale(1.1);
+}
+
+.portrait-girly {
+    position: relative;
+    width: 520px;
+    height: 447px;
+    z-index: 5;
+    margin-top: -44px;
+    margin-left: -48px;
+}
+
+.portrait-girly:hover {
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+	transform: scale(1.1);
+}
+
+.portrait-woman {
+    position: relative;
+    width: 332px;
+    height: 435px;
+    z-index: 4;
+    margin-top: -21px;
+    margin-left: -13px;
+}
+
+.portrait-woman:hover {
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+	transform: scale(1.1);
+}
+
+.portrait-forest {
+    position: relative;
+    width: 431px;
+    height: 301px;
+    z-index: 6;
+    margin-top: -294px;
+    margin-left: 72px;
+}
+
+.portrait-forest:hover {
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+	transform: scale(1.1);
+}
+
+@media screen and (min-width: 1350px) and (max-width: 1450px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__portraits {
+        position: absolute;
+        margin-top: -808px;
+        margin-left: 23px;
+    }
+    
+    .portrait-boy {
+        position: relative;
+        width: 518.7px;
+        height: 305.59000000000003px;
+        z-index: 3;
+        margin-left: -44px;
+        margin-top: -246px;
+    }
+    
+    .portrait-girl {
+        position: relative;
+        width: 441.74px;
+        height: 274.12px;
+        z-index: 1;
+        margin-top: 0px;
+        margin-left: 692px;
+    }
+    
+    .portrait-lady {
+        position: relative;
+        width: 671.25px;
+        height: 409.35px;
+        z-index: 7;
+        margin-left: -575px;
+        margin-top: 50px;
+    }
+    
+    .portrait-miss {
+        position: relative;
+        width: 330.32px;
+        height: 254px;
+        z-index: 8;
+        margin-top: -261px;
+        margin-left: 549px;
+    }
+    
+    .portrait-girly {
+        position: relative;
+        width: 374.4px;
+        height: 311.35px;
+        z-index: 6;
+        margin-top: -540px;
+        margin-left: -412px;
+    }
+    
+    .portrait-woman {
+        position: relative;
+        width: 330.4px;
+        height: 423.35px;
+        z-index: 5;
+        margin-top: -496px;
+        margin-left: 780px;
+    }
+    
+    .portrait-forest {
+        position: relative;
+        width: 390px;
+        height: 249px;
+        z-index: 1;
+        margin-top: -761px;
+        margin-left: 358px;
+    }
+
+    .portrait-boy:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-girl:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-lady:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-miss:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-girly:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-woman:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-forest:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+}
+
+@media screen and (min-width: 1215px) and (max-width: 1350px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__portraits {
+        position: absolute;
+        margin-top: -737px;
+    }
+    
+    .portrait-boy {
+        position: relative;
+        width: 518.7px;
+        height: 305.59000000000003px;
+        z-index: 3;
+        margin-left: -44px;
+        margin-top: -246px;
+    }
+    
+    .portrait-girl {
+        position: relative;
+        width: 441.74px;
+        height: 274.12px;
+        z-index: 1;
+        margin-top: 0px;
+        margin-left: 692px;
+    }
+    
+    .portrait-lady {
+        position: relative;
+        width: 671.25px;
+        height: 409.35px;
+        z-index: 7;
+        margin-left: -575px;
+        margin-top: 50px;
+    }
+    
+    .portrait-miss {
+        position: relative;
+        width: 330.32px;
+        height: 254px;
+        z-index: 8;
+        margin-top: -261px;
+        margin-left: 549px;
+    }
+    
+    .portrait-girly {
+        position: relative;
+        width: 374.4px;
+        height: 311.35px;
+        z-index: 6;
+        margin-top: -540px;
+        margin-left: -412px;
+    }
+    
+    .portrait-woman {
+        position: relative;
+        width: 330.4px;
+        height: 423.35px;
+        z-index: 5;
+        margin-top: -496px;
+        margin-left: 780px;
+    }
+    
+    .portrait-forest {
+        position: relative;
+        width: 390px;
+        height: 249px;
+        z-index: 1;
+        margin-top: -761px;
+        margin-left: 358px;
+    }
+
+    .portrait-boy:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-girl:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-lady:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-miss:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-girly:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-woman:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-forest:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+}
+
+@media screen and (min-width: 1185px) and (max-width: 1215px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__portraits {
+        position: absolute;
+        margin-top: -849px;
+    }
+    
+    .portrait-boy {
+        position: relative;
+        width: 518.7px;
+        height: 305.59000000000003px;
+        z-index: 3;
+        margin-left: -44px;
+        margin-top: -246px;
+    }
+    
+    .portrait-girl {
+        position: relative;
+        width: 441.74px;
+        height: 274.12px;
+        z-index: 1;
+        margin-top: 0px;
+        margin-left: 692px;
+    }
+    
+    .portrait-lady {
+        position: relative;
+        width: 671.25px;
+        height: 409.35px;
+        z-index: 7;
+        margin-left: -575px;
+        margin-top: 50px;
+    }
+    
+    .portrait-miss {
+        position: relative;
+        width: 349.32px;
+        height: 281px;
+        z-index: 8;
+        margin-top: -205px;
+        margin-left: 486px;
+    }
+    
+    .portrait-girly {
+        position: relative;
+        width: 392.4px;
+        height: 342.35px;
+        z-index: 6;
+        margin-top: -486px;
+        margin-left: -364px;
+    }
+    
+    .portrait-woman {
+        position: relative;
+        width: 330.4px;
+        height: 423.35px;
+        z-index: 5;
+        margin-top: -545px;
+        margin-left: 780px;
+    }
+    
+    .portrait-forest {
+        position: relative;
+        width: 390px;
+        height: 249px;
+        z-index: 1;
+        margin-top: -822px;
+        margin-left: 358px;
+    }
+
+    .portrait-boy:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-girl:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-lady:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-miss:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-girly:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-woman:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-forest:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+}
+
+@media screen and (min-width: 1055px) and (max-width: 1185px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__portraits {
+        position: absolute;
+        margin-top: -735px;
+    }
+    
+    .portrait-boy {
+        position: relative;
+        width: 486.7px;
+        height: 293.59000000000003px;
+        z-index: 3;
+        margin-left: -85px;
+        margin-top: -246px;
+    }
+    
+    .portrait-girl {
+        position: relative;
+        width: 369.74px;
+        height: 248.12px;
+        z-index: 1;
+        margin-top: 0px;
+        margin-left: 531px;
+    }
+    
+    .portrait-lady {
+        position: relative;
+        width: 554.25px;
+        height: 356.35px;
+        z-index: 7;
+        margin-left: -486px;
+        margin-top: 22px;
+    }
+    
+    .portrait-miss {
+        position: relative;
+        width: 264.32px;
+        height: 224px;
+        z-index: 6;
+        margin-top: -196px;
+        margin-left: 451px;
+    }
+    
+    .portrait-girly {
+        position: relative;
+        width: 300.4px;
+        height: 284.35px;
+        z-index: 2;
+        margin-top: -425px;
+        margin-left: -318px;
+    }
+    
+    .portrait-woman {
+        position: relative;
+        width: 234.4px;
+        height: 315.35px;
+        z-index: 5;
+        margin-top: -412px;
+        margin-left: 676px;
+    }
+    
+    .portrait-forest {
+        position: relative;
+        width: 334px;
+        height: 207px;
+        z-index: 1;
+        margin-top: -661px;
+        margin-left: 326px;
+    }
+
+    .portrait-boy:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-girl:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-lady:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-miss:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-girly:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-woman:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-forest:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1055px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__portraits {
+        position: absolute;
+        margin-top: -667px;
+    }
+    
+    .portrait-boy {
+        position: relative;
+        width: 486.7px;
+        height: 293.59000000000003px;
+        z-index: 3;
+        margin-left: -85px;
+        margin-top: -246px;
+    }
+    
+    .portrait-girl {
+        position: relative;
+        width: 369.74px;
+        height: 248.12px;
+        z-index: 1;
+        margin-top: 0px;
+        margin-left: 531px;
+    }
+    
+    .portrait-lady {
+        position: relative;
+        width: 554.25px;
+        height: 356.35px;
+        z-index: 7;
+        margin-left: -486px;
+        margin-top: 22px;
+    }
+    
+    .portrait-miss {
+        position: relative;
+        width: 264.32px;
+        height: 224px;
+        z-index: 6;
+        margin-top: -196px;
+        margin-left: 451px;
+    }
+    
+    .portrait-girly {
+        position: relative;
+        width: 300.4px;
+        height: 284.35px;
+        z-index: 2;
+        margin-top: -425px;
+        margin-left: -318px;
+    }
+    
+    .portrait-woman {
+        position: relative;
+        width: 234.4px;
+        height: 315.35px;
+        z-index: 5;
+        margin-top: -412px;
+        margin-left: 676px;
+    }
+    
+    .portrait-forest {
+        position: relative;
+        width: 334px;
+        height: 207px;
+        z-index: 1;
+        margin-top: -661px;
+        margin-left: 326px;
+    }
+
+    .portrait-boy:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-girl:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-lady:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-miss:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-girly:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-woman:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-forest:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+}
+
+@media screen and (min-width: 971px) and (max-width: 1000px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__portraits {
+        position: absolute;
+        margin-top: -562px;
+    }
+    
+    .portrait-boy {
+        position: relative;
+        width: 421.7px;
+        height: 257.59000000000003px;
+        z-index: 3;
+        margin-left: -85px;
+        margin-top: -246px;
+    }
+    
+    .portrait-girl {
+        position: relative;
+        width: 320.74px;
+        height: 219.12px;
+        z-index: 1;
+        margin-top: 36px;
+        margin-left: 531px;
+    }
+    
+    .portrait-lady {
+        position: relative;
+        width: 456.25px;
+        height: 304.35px;
+        z-index: 7;
+        margin-left: -409px;
+        margin-top: -20px;
+    }
+    
+    .portrait-miss {
+        position: relative;
+        width: 264.32px;
+        height: 216px;
+        z-index: 6;
+        margin-top: -203px;
+        margin-left: 385px;
+    }
+    
+    .portrait-girly {
+        position: relative;
+        width: 300.4px;
+        height: 284.35px;
+        z-index: 2;
+        margin-top: -388px;
+        margin-left: -317px;
+    }
+    
+    .portrait-woman {
+        position: relative;
+        width: 234.4px;
+        height: 315.35px;
+        z-index: 5;
+        margin-top: -332px;
+        margin-left: 637px;
+    }
+    
+    .portrait-forest {
+        position: relative;
+        width: 296px;
+        height: 210px;
+        z-index: 1;
+        margin-top: -571px;
+        margin-left: 293px;
+    }
+
+    .portrait-boy:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-girl:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-lady:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-miss:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-girly:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-woman:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-forest:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+}
+
+@media screen and (min-width: 889px) and (max-width: 971px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__portraits {
+        position: absolute;
+        margin-top: -562px;
+    }
+    
+    .portrait-boy {
+        position: relative;
+        width: 393.7px;
+        height: 249.59px;
+        z-index: 3;
+        margin-left: -106px;
+        margin-top: -219px;
+    }
+    
+    .portrait-girl {
+        position: relative;
+        width: 320.74px;
+        height: 219.12px;
+        z-index: 1;
+        margin-top: 36px;
+        margin-left: 448px;
+    }
+    
+    .portrait-lady {
+        position: relative;
+        width: 394.25px;
+        height: 262.35px;
+        z-index: 7;
+        margin-left: -378px;
+        margin-top: 19px;
+    }
+    
+    .portrait-miss {
+        position: relative;
+        width: 219.32px;
+        height: 197px;
+        z-index: 3;
+        margin-top: -178px;
+        margin-left: 305px;
+    }
+    
+    .portrait-girly {
+        position: relative;
+        width: 240.4px;
+        height: 237.35px;
+        z-index: 2;
+        margin-top: -365px;
+        margin-left: -241px;
+    }
+    
+    .portrait-woman {
+        position: relative;
+        width: 234.4px;
+        height: 315.35px;
+        z-index: 5;
+        margin-top: -379px;
+        margin-left: 523px;
+    }
+    
+    .portrait-forest {
+        position: relative;
+        width: 285px;
+        height: 174px;
+        z-index: 2;
+        margin-top: -530px;
+        margin-left: 247px;
+    }
+
+    .portrait-boy:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-girl:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-lady:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-miss:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-girly:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-woman:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-forest:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 889px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__portraits {
+        position: absolute;
+        margin-top: -562px;
+    }
+    
+    .portrait-boy {
+        position: relative;
+        width: 393.7px;
+        height: 249.59px;
+        z-index: 3;
+        margin-left: -106px;
+        margin-top: -219px;
+    }
+    
+    .portrait-girl {
+        position: relative;
+        width: 320.74px;
+        height: 219.12px;
+        z-index: 1;
+        margin-top: 36px;
+        margin-left: 361px;
+    }
+    
+    .portrait-lady {
+        position: relative;
+        width: 394.25px;
+        height: 262.35px;
+        z-index: 7;
+        margin-left: -378px;
+        margin-top: 19px;
+    }
+    
+    .portrait-miss {
+        position: relative;
+        width: 219.32px;
+        height: 197px;
+        z-index: 3;
+        margin-top: -178px;
+        margin-left: 262px;
+    }
+    
+    .portrait-girly {
+        position: relative;
+        width: 229.4px;
+        height: 219.35px;
+        z-index: 2;
+        margin-top: -376px;
+        margin-left: -212px;
+    }
+    
+    .portrait-woman {
+        position: relative;
+        width: 234.4px;
+        height: 315.35px;
+        z-index: 5;
+        margin-top: -379px;
+        margin-left: 459px;
+    }
+    
+    .portrait-forest {
+        position: relative;
+        width: 285px;
+        height: 165px;
+        z-index: 2;
+        margin-top: -530px;
+        margin-left: 198px;
+    }
+
+    .portrait-boy:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-girl:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-lady:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-miss:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-girly:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-woman:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-forest:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+}
+
+@media screen and (min-width: 766px) and (max-width: 800px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__portraits {
+        position: absolute;
+        margin-top: -562px;
+    }
+    
+    .portrait-boy {
+        position: relative;
+        width: 393.7px;
+        height: 249.59px;
+        z-index: 3;
+        margin-left: -106px;
+        margin-top: -219px;
+    }
+    
+    .portrait-girl {
+        position: relative;
+        width: 320.74px;
+        height: 219.12px;
+        z-index: 1;
+        margin-top: 36px;
+        margin-left: 361px;
+    }
+    
+    .portrait-lady {
+        position: relative;
+        width: 394.25px;
+        height: 262.35px;
+        z-index: 7;
+        margin-left: -378px;
+        margin-top: 19px;
+    }
+    
+    .portrait-miss {
+        position: relative;
+        width: 219.32px;
+        height: 197px;
+        z-index: 3;
+        margin-top: -178px;
+        margin-left: 262px;
+    }
+    
+    .portrait-girly {
+        position: relative;
+        width: 229.4px;
+        height: 219.35px;
+        z-index: 2;
+        margin-top: -376px;
+        margin-left: -212px;
+    }
+    
+    .portrait-woman {
+        position: relative;
+        width: 234.4px;
+        height: 315.35px;
+        z-index: 5;
+        margin-top: -379px;
+        margin-left: 459px;
+    }
+    
+    .portrait-forest {
+        position: relative;
+        width: 285px;
+        height: 165px;
+        z-index: 2;
+        margin-top: -530px;
+        margin-left: 198px;
+    }
+
+    .portrait-boy:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-girl:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-lady:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-miss:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-girly:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-woman:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-forest:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 766px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__portraits {
+        position: absolute;
+        margin-top: -562px;
+    }
+    
+    .portrait-boy {
+        position: relative;
+        width: 351.7px;
+        height: 204.59px;
+        z-index: 3;
+        margin-left: -93px;
+        margin-top: -175px;
+    }
+    
+    .portrait-girl {
+        position: relative;
+        width: 240.74px;
+        height: 160.12px;
+        z-index: 1;
+        margin-top: 83px;
+        margin-left: 257px;
+    }
+    
+    .portrait-lady {
+        position: relative;
+        width: 284.25px;
+        height: 179.35px;
+        z-index: 7;
+        margin-left: -293px;
+        margin-top: -44px;
+    }
+    
+    .portrait-miss {
+        position: relative;
+        width: 219.32px;
+        height: 197px;
+        z-index: 2;
+        margin-top: -30px;
+        margin-left: 151px;
+    }
+    
+    .portrait-girly {
+        position: relative;
+        width: 229.4px;
+        height: 219.35px;
+        z-index: 5;
+        margin-top: -44px;
+        margin-left: -449px;
+    }
+    
+    .portrait-woman {
+        position: relative;
+        width: 190.4px;
+        height: 245.35px;
+        z-index: 5;
+        margin-top: -244px;
+        margin-left: 360px;
+    }
+    
+    .portrait-forest {
+        position: relative;
+        width: 256px;
+        height: 162px;
+        z-index: 2;
+        margin-top: -382px;
+        margin-left: 248px;
+    }
+
+    .portrait-boy:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-girl:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-lady:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-miss:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-girly:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-woman:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-forest:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+}
+
+@media screen and (min-width: 665px) and (max-width: 700px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__portraits {
+        position: absolute;
+        margin-top: -562px;
+    }
+    
+    .portrait-boy {
+        position: relative;
+        width: 351.7px;
+        height: 204.59px;
+        z-index: 3;
+        margin-left: -93px;
+        margin-top: -175px;
+    }
+    
+    .portrait-girl {
+        position: relative;
+        width: 240.74px;
+        height: 160.12px;
+        z-index: 1;
+        margin-top: 83px;
+        margin-left: 257px;
+    }
+    
+    .portrait-lady {
+        position: relative;
+        width: 284.25px;
+        height: 179.35px;
+        z-index: 7;
+        margin-left: -293px;
+        margin-top: -44px;
+    }
+    
+    .portrait-miss {
+        position: relative;
+        width: 219.32px;
+        height: 197px;
+        z-index: 2;
+        margin-top: -30px;
+        margin-left: 151px;
+    }
+    
+    .portrait-girly {
+        position: relative;
+        width: 229.4px;
+        height: 219.35px;
+        z-index: 5;
+        margin-top: -44px;
+        margin-left: -449px;
+    }
+    
+    .portrait-woman {
+        position: relative;
+        width: 190.4px;
+        height: 245.35px;
+        z-index: 5;
+        margin-top: -244px;
+        margin-left: 360px;
+    }
+    
+    .portrait-forest {
+        position: relative;
+        width: 256px;
+        height: 162px;
+        z-index: 2;
+        margin-top: -382px;
+        margin-left: 248px;
+    }
+
+    .portrait-boy:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-girl:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-lady:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-miss:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-girly:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-woman:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-forest:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 665px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__portraits {
+        position: absolute;
+        margin-top: -562px;
+    }
+    
+    .portrait-boy {
+        position: relative;
+        width: 274.7px;
+        height: 172.59px;
+        z-index: 3;
+        margin-left: -101px;
+        margin-top: -167px;
+    }
+    
+    .portrait-girl {
+        position: relative;
+        width: 240.74px;
+        height: 160.12px;
+        z-index: 1;
+        margin-top: 80px;
+        margin-left: 161px;
+    }
+    
+    .portrait-lady {
+        position: relative;
+        width: 284.25px;
+        height: 179.35px;
+        z-index: 7;
+        margin-left: -224px;
+        margin-top: -45px;
+    }
+    
+    .portrait-miss {
+        position: relative;
+        width: 219.32px;
+        height: 197px;
+        z-index: 2;
+        margin-top: -30px;
+        margin-left: 104px;
+    }
+    
+    .portrait-girly {
+        position: relative;
+        width: 229.4px;
+        height: 219.35px;
+        z-index: 5;
+        margin-top: -44px;
+        margin-left: -429px;
+    }
+    
+    .portrait-woman {
+        position: relative;
+        width: 190.4px;
+        height: 245.35px;
+        z-index: 5;
+        margin-top: -244px;
+        margin-left: 295px;
+    }
+    
+    .portrait-forest {
+        position: relative;
+        width: 252px;
+        height: 160px;
+        z-index: 2;
+        margin-top: -378px;
+        margin-left: 226px;
+    }
+
+    .portrait-boy:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-girl:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-lady:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-miss:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-girly:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-woman:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-forest:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+}
+
+@media screen and (min-width: 540px) and (max-width: 600px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__portraits {
+        position: absolute;
+        margin-top: -567px;
+    }
+    
+    .portrait-boy {
+        position: relative;
+        width: 274.7px;
+        height: 172.59px;
+        z-index: 3;
+        margin-left: -100px;
+        margin-top: -185px;
+    }
+    
+    .portrait-girl {
+        position: relative;
+        width: 263.74px;
+        height: 177.12px;
+        z-index: 1;
+        margin-top: 80px;
+        margin-left: 163px;
+    }
+    
+    .portrait-lady {
+        position: relative;
+        width: 315.25px;
+        height: 191.35px;
+        z-index: 7;
+        margin-left: -258px;
+        margin-top: -53px;
+    }
+    
+    .portrait-miss {
+        position: relative;
+        width: 218.32px;
+        height: 210px;
+        z-index: 2;
+        margin-top: -50px;
+        margin-left: 187px;
+    }
+    
+    .portrait-girly {
+        position: relative;
+        width: 219.4px;
+        height: 208.35px;
+        z-index: 5;
+        margin-top: -47px;
+        margin-left: -441px;
+    }
+    
+    .portrait-woman {
+        display: none;
+    }
+    
+    .portrait-forest {
+        position: relative;
+        width: 257px;
+        height: 175px;
+        z-index: 2;
+        margin-top: -336px;
+        margin-left: 184px;
+    }
+
+    .portrait-boy:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-girl:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-lady:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-miss:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-girly:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-woman:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-forest:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+}
+
+@media screen and (min-width: 444px) and (max-width: 540px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__portraits {
+        position: absolute;
+        margin-top: -562px;
+    }
+    
+    .portrait-boy {
+        position: relative;
+        width: 269.7px;
+        height: 164.59px;
+        z-index: 3;
+        margin-left: -115px;
+        margin-top: -147px;
+    }
+    
+    .portrait-girl {
+        position: relative;
+        width: 220.74px;
+        height: 135.12px;
+        z-index: 1;
+        margin-top: 80px;
+        margin-left: 88px;
+    }
+    
+    .portrait-lady {
+        position: relative;
+        width: 269.25px;
+        height: 174.35px;
+        z-index: 7;
+        margin-left: -117px;
+        margin-top: -33px;
+    }
+    
+    .portrait-miss {
+        position: relative;
+        width: 219.32px;
+        height: 197px;
+        z-index: 2;
+        margin-top: -37px;
+        margin-left: 76px;
+    }
+    
+    .portrait-girly {
+        position: relative;
+        width: 229.4px;
+        height: 222.35px;
+        z-index: 5;
+        margin-top: -46px;
+        margin-left: -408px;
+    }
+    
+    .portrait-woman {
+        display: none;
+    }
+    
+    .portrait-forest {
+        position: relative;
+        width: 252px;
+        height: 162px;
+        z-index: 2;
+        margin-top: -175px;
+        margin-left: -75px;
+    }
+
+    .portrait-boy:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-girl:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-lady:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-miss:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-girly:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-woman:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-forest:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+}
+
+@media screen and (min-width: 389px) and (max-width: 444px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__portraits {
+        position: absolute;
+        margin-top: -727px;
+    }
+    
+    .portrait-boy {
+        position: relative;
+        width: 269.7px;
+        height: 164.59px;
+        z-index: 3;
+        margin-left: -115px;
+        margin-top: -147px;
+    }
+    
+    .portrait-girl {
+        position: relative;
+        width: 220.74px;
+        height: 135.12px;
+        z-index: 1;
+        margin-top: 80px;
+        margin-left: 88px;
+    }
+    
+    .portrait-lady {
+        position: relative;
+        width: 370.25px;
+        height: 227.35px;
+        z-index: 7;
+        margin-left: -110px;
+        margin-top: -31px;
+    }
+    
+    .portrait-miss {
+        position: relative;
+        width: 219.32px;
+        height: 197px;
+        z-index: 2;
+        margin-top: -37px;
+        margin-left: 56px;
+    }
+    
+    .portrait-girly {
+        position: relative;
+        width: 232.4px;
+        height: 222.35px;
+        z-index: 5;
+        margin-top: -42px;
+        margin-left: -394px;
+    }
+    
+    .portrait-woman {
+        display: none;
+    }
+    
+    .portrait-forest {
+        position: relative;
+        width: 231px;
+        height: 160px;
+        z-index: 2;
+        margin-top: 133px;
+        margin-left: -107px;
+    }
+
+    .portrait-boy:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-girl:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-lady:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-miss:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-girly:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-woman:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-forest:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+}
+
+@media screen and (min-width: 349px) and (max-width: 389px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__portraits {
+        position: absolute;
+        margin-top: -529px;
+    }
+    
+    .portrait-boy {
+        position: relative;
+        width: 245.91px;
+        height: 152.59px;
+        z-index: 3;
+        margin-left: -115px;
+        margin-top: -147px;
+    }
+    
+    .portrait-girl {
+        position: relative;
+        width: 216.74px;
+        height: 128.12px;
+        z-index: 1;
+        margin-top: 80px;
+        margin-left: 47px;
+    }
+    
+    .portrait-lady {
+        position: relative;
+        width: 323.25px;
+        height: 191.35px;
+        z-index: 7;
+        margin-left: -97px;
+        margin-top: -38px;
+    }
+    
+    .portrait-miss {
+        position: relative;
+        width: 185.32px;
+        height: 160px;
+        z-index: 2;
+        margin-top: -25px;
+        margin-left: 45px;
+    }
+    
+    .portrait-girly {
+        position: relative;
+        width: 176.4px;
+        height: 176.35px;
+        z-index: 5;
+        margin-top: -30px;
+        margin-left: -319px;
+    }
+    
+    .portrait-woman {
+        display: none;
+    }
+    
+    .portrait-forest {
+        display: none;
+    }
+
+    .portrait-boy:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-girl:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-lady:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-miss:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-girly:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-woman:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-forest:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+}
+
+@media screen and (min-width:300px) and (max-width:349px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__portraits {
+        position: absolute;
+        margin-top: -459px;
+    }
+    
+    .portrait-boy {
+        position: relative;
+        width: 239.91px;
+        height: 140.59px;
+        z-index: 3;
+        margin-left: -115px;
+        margin-top: -143px;
+    }
+    
+    .portrait-girl {
+        position: relative;
+        width: 216.74px;
+        height: 128.12px;
+        z-index: 1;
+        margin-top: 80px;
+        margin-left: 47px;
+    }
+    
+    .portrait-lady {
+        position: relative;
+        width: 301.25px;
+        height: 174.35px;
+        z-index: 7;
+        margin-left: -97px;
+        margin-top: -59px;
+    }
+    
+    .portrait-miss {
+        position: relative;
+        width: 157.32px;
+        height: 133px;
+        z-index: 2;
+        margin-top: -25px;
+        margin-left: 43px;
+    }
+    
+    .portrait-girly {
+        position: relative;
+        width: 145.4px;
+        height: 145.35px;
+        z-index: 5;
+        margin-top: -31px;
+        margin-left: -290px;
+    }
+    
+    .portrait-woman {
+        display: none;
+    }
+    
+    .portrait-forest {
+        display: none;
+    }
+
+    .portrait-boy:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-girl:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-lady:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-miss:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-girly:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-woman:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-forest:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+}
+
+@media screen and (min-width:200px) and (max-width:300px) {
+    /* Target landscape smartphones, portrait tablets, narrow desktops*/
+    .main-block__portraits {
+        position: absolute;
+        margin-top: -452px;
+    }
+    
+    .portrait-boy {
+        position: relative;
+        width: 199.91px;
+        height: 118.59px;
+        z-index: 3;
+        margin-left: -115px;
+        margin-top: -155px;
+    }
+    
+    .portrait-girl {
+        position: relative;
+        width: 216.74px;
+        height: 128.12px;
+        z-index: 1;
+        margin-top: 90px;
+        margin-left: 15px;
+    }
+    
+    .portrait-lady {
+        position: relative;
+        width: 258.25px;
+        height: 157.35px;
+        z-index: 7;
+        margin-left: -97px;
+        margin-top: -54px;
+    }
+    
+    .portrait-miss {
+        position: relative;
+        width: 130.32px;
+        height: 115px;
+        z-index: 2;
+        margin-top: -25px;
+        margin-left: 29px;
+    }
+    
+    .portrait-girly {
+        position: relative;
+        width: 129.4px;
+        height: 121.35px;
+        z-index: 5;
+        margin-top: -24px;
+        margin-left: -247px;
+    }
+    
+    .portrait-woman {
+        display: none;
+    }
+    
+    .portrait-forest {
+        display: none;
+    }
+
+    .portrait-boy:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-girl:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-lady:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-miss:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-girly:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-woman:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+
+    .portrait-forest:hover {
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        transform: scale(1.1);
+    }
+}
+
+.main-block__contact {
+    margin-left: 6px;
+    margin-top: -47px;
+}
+
+.title__contact {
+    font-family: 'Sree Krushnadevaraya';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 226.47%;
+    letter-spacing: 0.335em;
+    color: #000000;
+}
+
+.text__contact {
+    font-family: 'Sree Krushnadevaraya';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 50px;
+    color: #000000;
+    display: inline-block;
+}
+
+.main-block__podcasts {
+    margin-left: -14px;
+    margin-top: -50px;
+}
+
+@media (max-width: 767px) {
+    .main-block__contact {
+        margin-left: -96px;
+        margin-top: -47px;
+    }
+    
+    .title__contact {
+        font-family: 'Sree Krushnadevaraya';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 226.47%;
+        letter-spacing: 0.335em;
+        color: #000000;
+    }
+    
+    .text__contact {
+        font-family: 'Sree Krushnadevaraya';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 50px;
+        color: #000000;
+        display: inline-block;
+    }
+    
+    .main-block__podcasts {
+        margin-left: -14px;
+        margin-top: -50px;
+    }
+
+}
+
+@media (max-width: 479px) {
+    .main-block__contact {
+        margin-left: -96px;
+        margin-top: -47px;
+    }
+    
+    .title__contact {
+        font-family: 'Sree Krushnadevaraya';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 226.47%;
+        letter-spacing: 0.335em;
+        color: #000000;
+    }
+    
+    .text__contact {
+        font-family: 'Sree Krushnadevaraya';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 50px;
+        color: #000000;
+        display: inline-block;
+    }
+    
+    .main-block__podcasts {
+        margin-left: -14px;
+        margin-top: -50px;
+    }
+}
+
+a {
+    display: block;
+}
+
+.images {
+    vertical-align: top;
+    width: 180px;
+    height: 180px;
+}
+
+.bit {
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    margin: 1.9rem;
+    font-family: 'Sree Krushnadevaraya';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 20px;
+    color: #000000;
+}
