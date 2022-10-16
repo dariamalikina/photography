@@ -3008,7 +3008,7 @@ flex-wrap: wrap;
 
 @media (max-width: 479px) {
     .main-block__contact {
-        margin-left: -96px;
+	margin-left: -78px;
         margin-top: -47px;
     }
     
