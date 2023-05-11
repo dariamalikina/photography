@@ -50,7 +50,6 @@ body {
 
 /*---------CONTAINER-CLASS---------*/
 ._container {
-    max-width: 1440px;
     margin: 0px auto;
     padding: 0px 120px;
     box-sizing: content-box;
@@ -979,7 +978,8 @@ flex-wrap: wrap;
 
 .main-block__portraits {
     position: absolute;
-    margin-top: -897px;
+    margin-top: -1037px;
+    margin-left: 126px;
 }
 
 .portrait-boy {
