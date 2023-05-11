@@ -1,2 +1,2 @@
 # photography
-project for photograph
+Сайт-портфолио для профессионального фотографа 
